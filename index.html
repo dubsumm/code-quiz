@@ -12,26 +12,45 @@
 <body>
     <header>
         <a href="./assets/html/score.html">View Highscores</a>
-        <h3 class="timer">timer</h3>
+        <h3>Timer: <span class="timer">60</span></h3>
 
-    </header> 
-    <main>
-        <br><br><br><br>
-        <div class="instructions">
-            <h1>Coding Quiz Challenge</h1> 
-            <ol> 
-                <li>You will have one minute to answer 10 questions.</li>
-                <li>Every incorrect answer will take 10 secs off the clock</li>
-                <li>Press the star button when your ready to begin!</li>
-            </ol>
-            <div class="start-button"><button>Start</button></div>
-        </div>
-        <div class="quizmain">
-            
-
-        </div>
-        
+    </header>
+    <main> 
+        <section>
+            <br><br><br><br>
+            <div
+            id="instructions" class="instructions">
+                <h1>Coding Quiz Challenge</h1> 
+                <ol> 
+                    <li>You will have one minute to answer 10 questions.</li>
+                    <li>Every incorrect answer will take 10 secs off the clock</li>
+                    <li>Press the star button when your ready to begin!</li>
+                </ol>
+                <div id="start-butn" class="start-butn"><button id="start">Start</button></div>
+            </div>
+        </section>
+        <section>
+            <div id="quiz-box" class="quiz-box">
+                <div>
+                    <span id="question"></span>
+                </div>
+                <div class="answer-box"></div>
+                    <div class="answer">
+                        <button id="butnA"><span id="answerA"></span></button>
+                    </div>
+                    <div class="answer">
+                        <button id="butnB"><span id="answerB"></span></button>
+                    </div>
+                    <div class="answer">
+                        <button id="butnC"><span id="answerC"></span></button>
+                    </div>
+                    <div class="answer">
+                        <button id="butnD"><span id="answerD"></span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

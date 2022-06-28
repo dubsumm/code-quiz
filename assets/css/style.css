@@ -1,3 +1,7 @@
+:root {
+    --buttoncolor: rgba(19, 220, 153, 0.773); 
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -11,10 +15,12 @@ header{
 header, h3 {
     margin-top: 0%;
 }
+header h3 span {
+    font-size: 40px;
+}
 
 .instructions{
     display: flex;
-    
     border-color: black;
     border-style: solid;
     width: 50%;
@@ -32,15 +38,64 @@ header, h3 {
     background-color: white;
 }
 
-.start-button button {
+.start-butn button {
     font-size: 25px;
-    font-weight: bolder;
-    background-color: rgba(8, 201, 137, 0.773);
+    font-weight: 600;
+    background-color: var(--buttoncolor);
     border-radius: 6px;
     padding: 10px 20px;
     cursor: grab;
     
 }
-.start-button, button:hover {
+.start-butn, button:hover {
+    filter: brightness(120%);
+}
+
+.quiz-box{
+    display: none;
+    border-color: black;
+    border-style: solid;
+    width: 50%;
+    margin: 0 auto;
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.quiz-box{
+    background-color: white;
+}
+
+.quiz-box div {
+    margin-bottom: 10px;
+}
+.quiz-box span{
+    background-color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.answer {
+    background-color: white;
+}
+.answer button {
+    background-color: var(--buttoncolor);
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: grab;
+}
+
+.answer span {
+    font-size: 18px;
+    font-weight: 400;
+    background-color: var(--buttoncolor);
+}
+
+.answer-box button:hover {
     filter: brightness(120%);
 }
