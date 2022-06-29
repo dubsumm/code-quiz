@@ -2,7 +2,7 @@
     --buttoncolor: rgba(19, 220, 153, 0.773); 
 }
 
-* {
+body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     background-color: pink;
@@ -19,6 +19,10 @@ header h3 span {
     font-size: 40px;
 }
 
+.instructons h1 {
+    text-decoration: solid;
+}
+
 .instructions{
     display: flex;
     border-color: black;
@@ -30,12 +34,16 @@ header h3 span {
     justify-content: center;
     align-self: center;
     justify-self: center;
-    padding: 5px;
+    padding: 40px;
     border-radius: 6px;
 }
 
 .instructions, h1, ol, li {
     background-color: white;
+}
+
+ h1{
+    text-decoration:underline;
 }
 
 .start-butn button {
@@ -53,6 +61,7 @@ header h3 span {
 
 .quiz-box{
     display: none;
+    background-color: white;
     border-color: black;
     border-style: solid;
     width: 50%;
@@ -67,35 +76,22 @@ header h3 span {
     border-radius: 6px;
 }
 
-.quiz-box{
-    background-color: white;
-}
 
 .quiz-box div {
-    margin-bottom: 10px;
-}
-.quiz-box span{
-    background-color: white;
-    font-size: 25px;
-    font-weight: 600;
+    margin-bottom: 20px;
 }
 
+
 .answer {
-    background-color: white;
-}
-.answer button {
+    display:flex;
+    -color: white;
     background-color: var(--buttoncolor);
     border-radius: 6px;
     padding: 10px 20px;
     cursor: grab;
+    margin-bottom: 3px;
 }
 
-.answer span {
-    font-size: 18px;
-    font-weight: 400;
-    background-color: var(--buttoncolor);
-}
-
-.answer-box button:hover {
+.answer:hover {
     filter: brightness(120%);
 }
