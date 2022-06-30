@@ -5,7 +5,9 @@ var timeEl = document.querySelector(".timer");
 var titleEl = document.getElementById('Qtitle');
 var choiceEl = document.getElementById('Choices');
 var initialsinputEl = document.getElementById('input-initials')
-var secondsLeft = 59;
+var userEmailSpan = document.querySelector("#user-email");
+var userPasswordSpan = document.querySelector("#user-password");
+var secondsLeft = 5;
 var questionindex =0;
 var userscore = 0;
 var questions = [
@@ -82,9 +84,7 @@ function setTime() {
     var timerInterval = setInterval(function() {
       timeEl.textContent = secondsLeft;
       secondsLeft--;
-      
-  
-      if(secondsLeft < 0) {
+      if(secondsLeft < 0 || questionindex>=10) {
         // Stops execution of action at set interval
         clearInterval(timerInterval);
       }
@@ -108,7 +108,6 @@ function retrieveQuestions () {
             choicepattern.textContent = choice; //got check act to set class and value
             choiceEl.append(choicepattern); // adds the elements to the parent ChoiceEl
             choicepattern.classList.add("answer"); // applies  class='answer' styling
-            console.log(choicepattern);
             choicepattern.addEventListener("click", checkanswer);
         })
     } else {
@@ -138,15 +137,16 @@ function checkanswer(){
     titleEl.textContent = 'Your Score is: ' + userscore+ '/10';
     choiceEl.innerHTML='';
     initialsinputEl.style.display = 'flex';
-    choicepattern = document.createElement('button');
-    choicepattern.textContent = 'Submit'
-    initialsinputEl.append(choicepattern); 
-    choicepattern.classList.add("answer");
-
-
-
+var inbtn = document.getElementById('initials-button')
+    inbtn.addEventListener("click", function(){
+        event.preventDefault();
+        var getInitials = document.querySelector('#initials').value
+        localStorage.setItem('score', userscore);
+        localStorage.setItem('initials' ,getInitials);
+        userEmailSpan.textContent = userscore;
+        userPasswordSpan.textContent = getInitials;
+    });
  } 
- 
  
  function goFunction() {
     setTime();  //start the timer
