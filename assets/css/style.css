@@ -19,6 +19,13 @@ header h3 span {
     font-size: 40px;
 }
 
+a {
+    font-family: 'Roboto';
+    font-size: 30px;
+    
+    color: black;
+    margin-top: .2em;
+}
 .instructons h1 {
     text-decoration: solid;
 }
@@ -94,7 +101,10 @@ header h3 span {
 
 #input-initials {
     display: none;
+}
 
+#end-screen {
+    display: none;
 }
 input {
         border: none;

@@ -4,10 +4,11 @@ var instrctnsEl = document.getElementById('instructions');
 var timeEl = document.querySelector(".timer");
 var titleEl = document.getElementById('Qtitle');
 var choiceEl = document.getElementById('Choices');
-var initialsinputEl = document.getElementById('input-initials')
-var userEmailSpan = document.querySelector("#user-email");
-var userPasswordSpan = document.querySelector("#user-password");
-var secondsLeft = 5;
+var initialsinputEl = document.getElementById('input-initials');
+var userInitialsSpan = document.querySelector("#user-initials");
+var userScoreSpan = document.querySelector("#user-score");
+var endScreenEl = document.getElementById('end-screen');
+var secondsLeft = 59;
 var questionindex =0;
 var userscore = 0;
 var questions = [
@@ -143,8 +144,14 @@ var inbtn = document.getElementById('initials-button')
         var getInitials = document.querySelector('#initials').value
         localStorage.setItem('score', userscore);
         localStorage.setItem('initials' ,getInitials);
-        userEmailSpan.textContent = userscore;
-        userPasswordSpan.textContent = getInitials;
+        // userInitialsSpan.textContent = userscore;
+        // userScoreSpan.textContent = getInitials;
+        titleEl.innerHTML= 'Thanks ' + getInitials;
+        initialsinputEl.style.display= 'none';
+        endScreentEl.style.display = 'flex';
+
+
+    
     });
  } 
  
